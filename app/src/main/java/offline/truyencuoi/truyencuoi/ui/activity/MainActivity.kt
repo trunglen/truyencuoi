@@ -43,7 +43,6 @@ class MainActivity : BaseActivity() {
             val categories = realm.where(Category::class.java).findAll().toList()
             lvCategory.adapter = CategoryAdapter(categories)
         }
-
         val stories = realm.where(Story::class.java).findAll().toList()
     }
 
