@@ -1,5 +1,7 @@
 package offline.truyencuoi.truyencuoi.extensions
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.support.v7.app.AppCompatActivity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -24,4 +26,10 @@ fun <T> Observable<T>.request(success: (T) -> Unit) {
             .observeOn(AndroidSchedulers.mainThread()).subscribe {
                 success(it)
             }
+}
+
+fun isOnline(context: Context): Boolean {
+    val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val netInfo = cm.activeNetworkInfo
+    return netInfo != null && netInfo.isConnectedOrConnecting
 }

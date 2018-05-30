@@ -1,5 +1,11 @@
 package offline.truyencuoi.truyencuoi.network.models
 
-data class Story (val id:String,
-                  val title:String,
-                  val content:String)
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+
+open class Story(@PrimaryKey var id: String,
+                 var title: String,
+                 var content: String,
+                 var category:String) : RealmObject() {
+    constructor() : this("", "", "","")
+}

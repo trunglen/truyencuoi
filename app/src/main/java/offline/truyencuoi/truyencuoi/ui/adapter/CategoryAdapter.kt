@@ -8,9 +8,9 @@ import offline.truyencuoi.truyencuoi.R
 import offline.truyencuoi.truyencuoi.extensions.inflate
 import offline.truyencuoi.truyencuoi.network.models.Category
 
-class CategoryAdapter(val categories:List<Category>): BaseAdapter() {
+class CategoryAdapter(val categories: List<Category>) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view =   parent.inflate(R.layout.category_item)
+        val view = parent.inflate(R.layout.category_item)
         view.categoryName.text = categories.get(position).name
         return view
     }

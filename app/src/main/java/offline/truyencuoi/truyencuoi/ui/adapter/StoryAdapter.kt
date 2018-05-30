@@ -1,15 +1,28 @@
 package offline.truyencuoi.truyencuoi.ui.adapter
 
+import android.content.Context
+import android.text.Html
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
+import kotlinx.android.synthetic.main.story_item.view.*
 import offline.truyencuoi.truyencuoi.R
+import offline.truyencuoi.truyencuoi.common.ApiConstant
 import offline.truyencuoi.truyencuoi.extensions.inflate
+import offline.truyencuoi.truyencuoi.extensions.loadImage
 import offline.truyencuoi.truyencuoi.network.models.Story
 
-class StoryAdapter(val stories:List<Story>):BaseAdapter() {
+class StoryAdapter(var stories: List<Story>) : BaseAdapter() {
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        return  parent.inflate(R.layout.story_item)
+        val view = parent.inflate(R.layout.story_item)
+        val story = stories[position]
+        view.tvStoryTitle.text = story.title
+        view.imvStoryThumb.loadImage(ApiConstant.STATIC_POST_URL + story.id)
+        view.tvStoryDescription.text = Html.fromHtml(story.content)
+        return view
     }
 
     override fun getItem(position: Int): Any {
@@ -17,11 +30,11 @@ class StoryAdapter(val stories:List<Story>):BaseAdapter() {
     }
 
     override fun getItemId(position: Int): Long {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return position.toLong()
     }
 
     override fun getCount(): Int {
         return stories.size
     }
-
 }
+
