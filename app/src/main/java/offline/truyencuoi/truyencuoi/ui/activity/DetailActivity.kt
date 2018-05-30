@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_detail.*
 import offline.truyencuoi.truyencuoi.R
 import offline.truyencuoi.truyencuoi.common.ApiConstant
 import offline.truyencuoi.truyencuoi.extensions.loadImage
+import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter
 
 class DetailActivity : AppCompatActivity() {
     var defaultTextSize = ApiConstant.DEFAULT_TEXT_SIZE
@@ -22,7 +23,7 @@ class DetailActivity : AppCompatActivity() {
         var bundle = intent.getBundleExtra("story")
         tvStoryTitle.text = bundle.getString("title")
         ivStoryThumb.loadImage(ApiConstant.STATIC_POST_URL + bundle.getString("id"))
-        tvStoryContent.text = Html.fromHtml(bundle.getString("content"))
+        tvStoryContent.setHtml(bundle.getString("content"), HtmlHttpImageGetter(tvStoryContent))
         btnZoomin.setOnClickListener {
             tvStoryContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, defaultTextSize++.toFloat())
             Log.d("text_size", tvStoryContent.textSize.toString())

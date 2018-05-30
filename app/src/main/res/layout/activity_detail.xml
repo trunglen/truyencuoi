@@ -42,12 +42,13 @@
                 ads:adUnitId="@string/banner_id"
                 ads:adSize="SMART_BANNER"
                 android:layout_gravity="bottom"/>
-            <TextView
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
                 android:id="@+id/tvStoryContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_largex"
-                android:textSize="@dimen/text_size_normalxxx"/>
+                android:textSize="@dimen/text_size_normalxxx" />
         </LinearLayout>
     </ScrollView>
 
