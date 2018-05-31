@@ -33,8 +33,10 @@ class SplashActivity : AppCompatActivity() {
         handler.postDelayed({
             run {
                 startActivity(Intent(this, MainActivity::class.java))
+                finish()
             }
         }, 2000)
+
     }
 
     fun cache() {
@@ -50,6 +52,7 @@ class SplashActivity : AppCompatActivity() {
         apiService.listPosts("", 0).request {
             saveResponstToRealm(it.body())
             for (story in it.body()) {
+                Log.d("cache_image",ApiConstant.STATIC_POST_URL + story.id)
                 imvCache.loadImage(ApiConstant.STATIC_POST_URL + story.id)
             }
         }

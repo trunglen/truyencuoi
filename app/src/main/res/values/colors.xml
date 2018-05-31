@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="message">#7a7a7a</color>
     <color name="subject">#111111</color>
+    <color name="splash_background">#20ca6d</color>
+    <color name="view_background">#eccb41</color>
 </resources>

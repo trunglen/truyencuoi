@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'realm-android' //nho vi tri nay
+apply plugin: 'realm-android' //nho vi tri nay 
 
 
 android {
