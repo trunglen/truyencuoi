@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Truyen cuoi rung ron</string>
-    <string name="banner_id">ca-app-pub-9374507533753194~3747257296</string>
-    <string name="admob_app_id">ca-app-pub-9374507533753194/1197949720</string>
+    <string name="banner_id">ca-app-pub-9374507533753194/1197949720</string>
+    <string name="admob_app_id">ca-app-pub-9374507533753194~3747257296</string>
+    <string name="facebook_app_id">193430827973397</string>
 </resources>

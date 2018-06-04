@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.ui.adapter
+package truyencuoioffline.truyencuoi.truyencuoi.ui.adapter
 
 import android.content.Context
 import android.text.Html
@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.story_item.view.*
-import offline.truyencuoi.truyencuoi.R
-import offline.truyencuoi.truyencuoi.common.ApiConstant
-import offline.truyencuoi.truyencuoi.extensions.inflate
-import offline.truyencuoi.truyencuoi.extensions.loadImage
-import offline.truyencuoi.truyencuoi.network.models.Story
+import truyencuoioffline.truyencuoi.truyencuoi.R
+import truyencuoioffline.truyencuoi.truyencuoi.common.ApiConstant
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.inflate
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.loadImage
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Story
 
 class StoryAdapter(var stories: List<Story>) : BaseAdapter() {
 

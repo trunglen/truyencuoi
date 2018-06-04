@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.network.models
+package truyencuoioffline.truyencuoi.truyencuoi.network.models
 
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey

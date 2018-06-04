@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.extensions
+package truyencuoioffline.truyencuoi.truyencuoi.extensions
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import offline.truyencuoi.truyencuoi.TruyencuoiApplication
+import truyencuoioffline.truyencuoi.truyencuoi.TruyencuoiApplication
 import retrofit2.Retrofit
 
 /**

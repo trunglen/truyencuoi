@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.extensions
+package truyencuoioffline.truyencuoi.truyencuoi.extensions
 
 import android.content.Context
 import android.support.annotation.ColorInt
@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
+import truyencuoioffline.truyencuoi.truyencuoi.R
 
 var View.isVisible: Boolean
     get() = visibility == View.VISIBLE
@@ -38,7 +39,7 @@ fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false):
 }
 
 fun ImageView.loadImage(url: String) {
-    Picasso.with(context).load(url).into(this)
+    Picasso.with(context).load(url).error(R.drawable.logo).into(this)
 }
 
 fun View.showSnackbar(message: String, length: Int = Snackbar.LENGTH_LONG, f: (Snackbar.() -> Unit) = {}) {

@@ -1,12 +1,12 @@
-package offline.truyencuoi.truyencuoi.ui.adapter
+package truyencuoioffline.truyencuoi.truyencuoi.ui.adapter
 
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.category_item.view.*
-import offline.truyencuoi.truyencuoi.R
-import offline.truyencuoi.truyencuoi.extensions.inflate
-import offline.truyencuoi.truyencuoi.network.models.Category
+import truyencuoioffline.truyencuoi.truyencuoi.R
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.inflate
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Category
 
 class CategoryAdapter(val categories: List<Category>) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {

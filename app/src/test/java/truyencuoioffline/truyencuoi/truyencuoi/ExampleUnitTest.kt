@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi
+package truyencuoioffline.truyencuoi.truyencuoi
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.common
+package truyencuoioffline.truyencuoi.truyencuoi.common
 
 object ApiConstant {
     const val API_BASE_ENDPOINT = "http://163.44.206.108:3009/api/"

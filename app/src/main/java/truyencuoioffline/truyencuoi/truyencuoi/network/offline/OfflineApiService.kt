@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.network.offline
+package truyencuoioffline.truyencuoi.truyencuoi.network.offline
 
 class OfflineApiService {
     fun listPosts(){

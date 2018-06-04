@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.ui.activity
+package truyencuoioffline.truyencuoi.truyencuoi.ui.activity
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -9,13 +9,13 @@ import com.squareup.picasso.Picasso
 import io.realm.Realm
 import io.realm.RealmObject
 import kotlinx.android.synthetic.main.activity_splash.*
-import offline.truyencuoi.truyencuoi.R
-import offline.truyencuoi.truyencuoi.common.ApiConstant
-import offline.truyencuoi.truyencuoi.extensions.getHttpService
-import offline.truyencuoi.truyencuoi.extensions.isOnline
-import offline.truyencuoi.truyencuoi.extensions.loadImage
-import offline.truyencuoi.truyencuoi.extensions.request
-import offline.truyencuoi.truyencuoi.network.http.ApiService
+import truyencuoioffline.truyencuoi.truyencuoi.R
+import truyencuoioffline.truyencuoi.truyencuoi.common.ApiConstant
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.getHttpService
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.isOnline
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.loadImage
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.request
+import truyencuoioffline.truyencuoi.truyencuoi.network.http.ApiService
 
 class SplashActivity : AppCompatActivity() {
     lateinit var apiService: ApiService

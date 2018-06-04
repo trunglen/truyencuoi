@@ -16,5 +16,6 @@
         android:layout_height="match_parent"
         android:id="@+id/categoryName"
         android:paddingLeft="@dimen/margin_smallxx"
-        android:textSize="@dimen/text_size_large" />
+        android:textSize="@dimen/text_size_large"
+        android:layout_gravity="fill"/>
 </LinearLayout>

@@ -1,22 +1,16 @@
-package offline.truyencuoi.truyencuoi.ui.activity
+package truyencuoioffline.truyencuoi.truyencuoi.ui.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.AdapterView
-import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
-import offline.truyencuoi.truyencuoi.R
-import offline.truyencuoi.truyencuoi.TruyencuoiApplication.Companion.apiService
-import offline.truyencuoi.truyencuoi.extensions.getHttpService
-import offline.truyencuoi.truyencuoi.extensions.isOnline
-import offline.truyencuoi.truyencuoi.extensions.request
-import offline.truyencuoi.truyencuoi.network.http.ApiService
-import offline.truyencuoi.truyencuoi.network.models.Category
-import offline.truyencuoi.truyencuoi.network.models.Story
-import offline.truyencuoi.truyencuoi.ui.adapter.CategoryAdapter
-import offline.truyencuoi.truyencuoi.ui.base.BaseActivity
+import truyencuoioffline.truyencuoi.truyencuoi.R
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.isOnline
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.request
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Category
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Story
+import truyencuoioffline.truyencuoi.truyencuoi.ui.adapter.CategoryAdapter
+import truyencuoioffline.truyencuoi.truyencuoi.ui.base.BaseActivity
 
 class MainActivity : BaseActivity() {
 
@@ -44,6 +38,9 @@ class MainActivity : BaseActivity() {
             lvCategory.adapter = CategoryAdapter(categories)
         }
         val stories = realm.where(Story::class.java).findAll().toList()
+        Thread().run {
+            requestAds(banner)
+        }
     }
 
 }

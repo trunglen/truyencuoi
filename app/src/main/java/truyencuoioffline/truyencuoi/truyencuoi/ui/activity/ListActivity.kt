@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi.ui.activity
+package truyencuoioffline.truyencuoi.truyencuoi.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,12 +6,12 @@ import android.support.v4.widget.SwipeRefreshLayout
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_list.*
-import offline.truyencuoi.truyencuoi.R
-import offline.truyencuoi.truyencuoi.extensions.isOnline
-import offline.truyencuoi.truyencuoi.extensions.request
-import offline.truyencuoi.truyencuoi.network.models.Story
-import offline.truyencuoi.truyencuoi.ui.adapter.StoryAdapter
-import offline.truyencuoi.truyencuoi.ui.base.BaseActivity
+import truyencuoioffline.truyencuoi.truyencuoi.R
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.isOnline
+import truyencuoioffline.truyencuoi.truyencuoi.extensions.request
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Story
+import truyencuoioffline.truyencuoi.truyencuoi.ui.adapter.StoryAdapter
+import truyencuoioffline.truyencuoi.truyencuoi.ui.base.BaseActivity
 
 class ListActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
 
@@ -22,6 +22,9 @@ class ListActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
         initView()
+        Thread().run {
+            requestAds(banner)
+        }
     }
 
     fun navigateToDetail(story: Story) {

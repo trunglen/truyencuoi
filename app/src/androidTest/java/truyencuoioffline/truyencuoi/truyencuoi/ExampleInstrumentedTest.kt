@@ -1,4 +1,4 @@
-package offline.truyencuoi.truyencuoi
+package truyencuoioffline.truyencuoi.truyencuoi
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

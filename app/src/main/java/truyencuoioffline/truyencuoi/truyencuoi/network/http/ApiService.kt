@@ -1,8 +1,8 @@
-package offline.truyencuoi.truyencuoi.network.http
+package truyencuoioffline.truyencuoi.truyencuoi.network.http
 
 import io.reactivex.Observable
-import offline.truyencuoi.truyencuoi.network.models.Category
-import offline.truyencuoi.truyencuoi.network.models.Story
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Category
+import truyencuoioffline.truyencuoi.truyencuoi.network.models.Story
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
