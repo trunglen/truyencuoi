@@ -7,10 +7,9 @@
     android:orientation="vertical"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.activity.DetailActivity">
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:paddingBottom="@dimen/margin_small"
@@ -35,13 +34,7 @@
                 android:id="@+id/ivStoryThumb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/banner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                ads:adUnitId="@string/banner_id"
-                ads:adSize="SMART_BANNER"
-                android:layout_gravity="bottom"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -52,4 +45,11 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/bannerDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adUnitId="@string/banner_id"
+        ads:adSize="SMART_BANNER"
+        android:layout_gravity="bottom"/>
 </LinearLayout>

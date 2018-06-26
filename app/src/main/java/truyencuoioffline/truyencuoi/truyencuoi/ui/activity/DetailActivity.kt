@@ -16,7 +16,7 @@ class DetailActivity : BaseActivity() {
         initView()
         Thread().run {
             Log.d("request_ads","request_ads")
-            requestAds(banner)
+            requestAds(bannerDetail)
         }
     }
 
